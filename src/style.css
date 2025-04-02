@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+@theme {
+	--font-sans: 'Roboto', 'ui-sans-serif', 'system-ui', 'sans';
+	--text-2xl: 1.75em;
+}
