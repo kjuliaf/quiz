@@ -46,16 +46,19 @@
 </script>
 
 <div class="flex h-screen">
-	<div class="m-auto flex flex-col items-center gap-10">
+	<div class="m-auto flex flex-col items-center gap-8 py-40">
 		{#if !showResult}
+		
 			<!-- Show quiz -->
 			<fieldset class="flex flex-col items-center gap-6">
+
 				<!-- Question -->
-				<legend class="mb-4 text-center text-xl">
+				<legend class="mb-6 px-6 text-center text-xl">
 					<span class="text-xl font-bold">Question {currentIndex + 1}:</span>
 					{currentQuestion.question}
 				</legend>
 				<div>
+
 					<!-- Answers -->
 					{#each currentQuestion.answers as quizAnswer, i}
 						<div class="flex gap-3 p-0.5">
@@ -95,6 +98,7 @@
 				{/each}
 			</ul>
 		{:else}
+
 			<!-- Result -->
 			<p class="text-lg">Your score is <span class="text-primary text-xl font-bold">{score}/{quiz.length}</span></p>
 			<button class="btn btn-primary" on:click={handleRetake}>Retake</button>
